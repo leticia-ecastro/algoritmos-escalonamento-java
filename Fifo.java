@@ -1,5 +1,3 @@
-
-
 import java.util.Scanner;
 
 public class Fifo {
@@ -32,23 +30,22 @@ public class Fifo {
 		double somaTme = 0;
 		double somaTmp = 0;
 		
-		System.out.println("Processo:\t Tempo de UCP:\t Tempo de Criacao:\t TMP: \t TME:");
+		System.out.println("Processo: Tempo de UCP:\t Tempo de Criacao: \tTMP: \t\tTME:");
 		for (int i = 0; i < n; i++) {
 			if (i == 0) {
 				tmp[i] = tempoUcp[i];
 				tme[i] = tempoCriacao[i];
 			}
-
 			acumulaTempoUcp += tempoUcp[i];
 			tmp[i] = acumulaTempoUcp - tempoCriacao[i];
 			tme[i] = tmp[i] - tempoUcp[i];
 			somaTmp += tmp[i];
 			somaTme += tme[i];
-			System.out.println("TMP do P" + (i + 1) + ": " + tmp[i] + "\t\tTME do P" + (i + 1) + ": " + tme[i]);
+			System.out.println("P" + (i + 1) + "\t\t" + tempoUcp[i] + "\t\t" + tempoCriacao[i] + "\t\t " + tmp[i] + "\t\t " + tme[i]);
 		}
 		
 		double tmpMedio = (double) (somaTmp / n);
 		double tmeMedio = (double)(somaTme / n);
-		System.out.printf("TMP medio = %.1f \tTME medio = %.1f", tmpMedio, tmeMedio);
+		System.out.printf("\nFIFO: TMP medio = %.1f \tTME medio = %.1f", tmpMedio, tmeMedio);
     }
 }
