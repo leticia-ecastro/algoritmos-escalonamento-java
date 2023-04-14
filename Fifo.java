@@ -23,6 +23,8 @@ public class Fifo {
             System.out.print("Informe o tempo de criacao do processo " + (i + 1) + ": ");
 			tempoCriacao[i] = entrada.nextInt();
 		}
+		
+		entrada.close();
 
         int[] tme = new int[n];
         int[] tmp = new int[n];
@@ -30,7 +32,7 @@ public class Fifo {
 		double somaTme = 0;
 		double somaTmp = 0;
 		
-		System.out.println("Processo: Tempo de UCP:\t Tempo de Criacao: \tTMP: \t\tTME:");
+		System.out.println("\nProcesso: Tempo de UCP:\t Tempo de Criacao: \tTMP: \t\tTME:");
 		for (int i = 0; i < n; i++) {
 			if (i == 0) {
 				tmp[i] = tempoUcp[i];
@@ -46,6 +48,6 @@ public class Fifo {
 		
 		double tmpMedio = (double) (somaTmp / n);
 		double tmeMedio = (double)(somaTme / n);
-		System.out.printf("\nFIFO: TMP medio = %.1f \tTME medio = %.1f", tmpMedio, tmeMedio);
+		System.out.printf("\nFIFO --> TMP medio = %.1f \nFIFO --> TME medio = %.1f", tmpMedio, tmeMedio);
     }
 }
