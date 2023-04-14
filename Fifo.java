@@ -21,18 +21,18 @@ public class Fifo {
             System.out.print("Informe o tempo de UCP do processo " + (i + 1) + ": ");
             tempoUcp[i] = entrada.nextInt();
             System.out.print("Informe o tempo de criacao do processo " + (i + 1) + ": ");
-			tempoCriacao[i] = entrada.nextInt();
-		}
-		
-		entrada.close();
+            tempoCriacao[i] = entrada.nextInt();
+        }
+        
+        entrada.close();
 
         int[] tme = new int[n];
         int[] tmp = new int[n];
-		int acumulaTempoUcp = 0;
-		double somaTme = 0;
-		double somaTmp = 0;
-		
-		System.out.println("\nProcesso: Tempo de UCP:\t Tempo de Criacao: \tTMP: \t\tTME:");
+        int acumulaTempoUcp = 0;
+        double somaTme = 0;
+        double somaTmp = 0;
+        
+        System.out.println("\nProcesso: Tempo de UCP:\t Tempo de Criacao: \tTMP: \t\tTME:");
 		for (int i = 0; i < n; i++) {
 			if (i == 0) {
 				tmp[i] = tempoUcp[i];
