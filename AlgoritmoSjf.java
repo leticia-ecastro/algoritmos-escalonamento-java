@@ -1,7 +1,9 @@
+import java.util.Scanner;
+
 public class AlgoritmoSjf {
 	
 	public static void main (String[] args) {
-		        Scanner entrada = new Scanner(System.in);
+		Scanner entrada = new Scanner(System.in);
         int n, start = 0, quantidadeProcessos = 0;
         double tme = 0, tmp = 0;
         
