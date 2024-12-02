@@ -1,3 +1,5 @@
+![repo-fifo-sjf](https://github.com/user-attachments/assets/7eddbb9c-aa8d-422d-a96b-6dbede829268)
+
 <h1>Algoritmos de escalonamento em Java</h1>
 
 <p align="justify">Este repositório contém os códigos de algoritmos de escalonamento não-preemptivos dos tipos:<br/>
